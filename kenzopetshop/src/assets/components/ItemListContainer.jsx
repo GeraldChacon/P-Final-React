@@ -1,6 +1,6 @@
 const ItemListContainer = ({texto}) => {
     return (
-        <h1 className="center" style={{color:"black", padding:"25px", textTransform:"uppercase"}}>{texto}</h1>
+        <h1 className="text-center bg-black mb-0" style={{color:"red",textTransform:"uppercase",padding:"30px"}}>{texto}</h1>
     )
 }
 

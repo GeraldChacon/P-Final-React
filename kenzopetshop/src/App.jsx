@@ -7,17 +7,19 @@ import Ofertas from './assets/components/Ofertas'
 import Carousel from './assets/components/Carousel'
 import Banner from './assets/components/Banner'
 import Footer from './assets/components/Footer'
+import ItemListContainer from './assets/components/ItemListContainer'
 
 function App() {
 
   return (
     <>
-      <NavBar />
-      <Ofertas />
-      <Carousel />
-      {/* <ItemListContainer texto={"Productos sin Stock"}/> */}
+      <NavBar/>
+      <Ofertas/>
+      <Carousel/>
+      <ItemListContainer texto={"Sin Stock"}/>
       <Banner/>
       <Footer/>
+      
     </>
   )
 }
