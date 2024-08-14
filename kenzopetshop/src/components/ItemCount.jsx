@@ -6,8 +6,7 @@ const ItemCount = ({stock, onAdd}) => {
     const [itemStock, setitemStock] = useState(stock);
     const [visible, setVisible] = useState(true);
 
-    
-    const incrementar = () => {
+        const incrementar = () => {
         if (contador < itemStock) {
             setContador(contador + 1)
         }
@@ -26,8 +25,7 @@ const ItemCount = ({stock, onAdd}) => {
             setContador(1);
             setVisible(false);
         } 
-    }
-
+    }   
     
     useEffect(() => {
         setitemStock(stock)
