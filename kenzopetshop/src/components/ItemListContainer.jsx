@@ -2,25 +2,14 @@ import { useEffect, useState } from "react";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
 import Carousel from "./Carousel";
-import { addDoc, collection, getDocs, getFirestore, query, where } from "firebase/firestore"
+import { collection, getDocs, getFirestore, query, where } from "firebase/firestore"
+import Loading from "./Loading";
 
 const ItemListContainer = () => {
+    const [loading, setLoading] = useState(true);
     const [items, setItems] = useState([]);
     const {id} = useParams();
-
-    //Importar 
-    // useEffect(() => {
-    //     const db = getFirestore();
-    //     const itemsCollection = collection(db, "items");
-        
-    //     arrayProdutos.forEach(item => {
-    //         addDoc(itemsCollection, item)
-    //     })
-
-    //     console.log("finalizado");
-    // }, [])
-
-    //Acceder con Consultas
+    
     useEffect(() => {
         const db = getFirestore();
         const itemsCollection = collection(db, "items");
@@ -28,6 +17,7 @@ const ItemListContainer = () => {
         getDocs(q).then(snapShot => {
             if (snapShot.size > 0) {
                 setItems(snapShot.docs.map(documento => ({id:documento.id, ...documento.data()})));
+                setLoading(false);
             } else {
                 console.log("Error");
             }
@@ -40,7 +30,7 @@ const ItemListContainer = () => {
             {id ? "" : <Carousel/>}
             <div className="container">
                 <div className="row">
-                    <ItemList items={items} />
+                    {loading ? <Loading /> : <ItemList items={items} />}
                 </div>
             </div>
         </>

@@ -10,12 +10,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDNvPOGTpPYE8hl9aUPaUOV8scsx74YPjI",
-  authDomain: "kenzopetshop-5d649.firebaseapp.com",
-  projectId: "kenzopetshop-5d649",
-  storageBucket: "kenzopetshop-5d649.appspot.com",
-  messagingSenderId: "396862809824",
-  appId: "1:396862809824:web:9ce73a853d3eb360a6d285"
+  apiKey: import.meta.env.VITE_APIKEY,
+  authDomain: import.meta.env.VITE_AUTHDOMAIN,
+  projectId: import.meta.env.VITE_PROJECTID,
+  storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+  appId: import.meta.env.VITE_APPID
 };
 
 // Initialize Firebase

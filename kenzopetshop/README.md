@@ -1,8 +1,4 @@
-# React + Vite
+# Kenzo Pet Shop
+## Proyecto Final de React JS en Coderhouse
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+El proyecto se realizo con fines educativos siguiendo los parametros impartidos por el contenido del curso React en la Plataforma de Coderhouse.
